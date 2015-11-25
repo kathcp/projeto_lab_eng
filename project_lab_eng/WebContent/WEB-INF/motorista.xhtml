@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de controle de entregas</title>
+<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+		<div id="geral">
+		<div id="topo">
+			<div id="topo_imagem"></div>
+			<div id="topo_texto">
+				<h2>Sistema de Controle de Entregas</h2>
+			</div>
+		</div>
+
+		<div id="barraMenu">
+			<ul>			
+				<li><a href="index.xhtml">Principal</a></li>
+				<li><a href="cliente.xhtml">Cliente</a></li>
+				<li><a href="entrega.xhtml">Entrega</a></li>
+				<li><a href="motorista.xhtml">Motorista</a></li>
+				<li><a href="recebimento.xhtml">Recebimento</a></li>
+				<li><a href="veiculo.xhtml">Veículo</a></li>
+				<li><a href="usuario.xhtml">Usuário</a></li>
+			</ul>
+		</div>
+		
+		<div id="conteudo">
+			<h3>Motorista</h3>
+			<h:messages />
+			<h:form>
+				<h:panelGrid columns="3">
+					<h:outputLabel value="Nome :" />
+					<h:inputText id="nome" value="#{motoristaMB.motorista.cnpj}"/>
+					<h:commandButton name="buscar" value=">>"
+						action="#{motoristaMB.buscarPorNome}" />
+
+					<h:outputLabel value="CNH:" />
+					<h:inputText id="cnh" value="#{motoristaMB.motorista.cnh}" />
+					<!-- sem nada -->
+
+					<h:outputLabel value="Categoria:" />
+					<h:inputText id="categoria" value="#{motoristaMB.motorista.categoria}" />
+					<!-- sem nada -->
+										
+					<h:outputLabel value="Vencimento:" />
+					<h:inputText id="vencimento" value="#{motoristaMB.motorista.vencimento}" />
+					<!-- sem nada -->
+					
+					<h:outputLabel value="MOPP:" />
+					<h:inputText id="mopp" value="#{motoristaMB.motorista.mopp}" />
+					<!-- sem nada -->
+					
+					<h:outputLabel value="Telefone:" />
+					<h:inputText id="fone" value="#{motoristaMB.motorista.fone}" />
+					<!-- sem nada -->
+					
+					<h:outputLabel value="Status:" />
+					<h:inputText id="status" value="#{motoristaMB.motorista.status}" />
+					<!-- sem nada -->
+										
+					<h:outputLabel />
+					<h:panelGroup>
+						<h:commandButton action="#{motoristaMB.adicionar}" value="Adicionar" />
+						<h:commandButton action="#{motoristaMB.atualizar}" value="Atualizar" />
+					</h:panelGroup>
+				</h:panelGrid>
+
+			</h:form>
+			<div style="clear: both"></div>
+			<div id="rodape">Trabalho de Laboratório de Engenharia de Software III</div>		
+		</div>
+	</div>	
+	</h:body>
+</html>
