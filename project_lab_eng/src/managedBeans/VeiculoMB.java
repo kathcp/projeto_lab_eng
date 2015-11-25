@@ -47,12 +47,12 @@ public class VeiculoMB  implements Serializable{
 	
 	
 	public String pesquisar() {
-		String msg = "Erro ao pesquisar veiculls no banco de dados";
+		String msg = "Erro ao pesquisar veiculos no banco de dados";
 		lista = daoVeiculo.listar();
 		msg = "Foram localizados " + lista.size() + " Clientes no banco de dados";		
 		FacesContext fc = FacesContext.getCurrentInstance();
 		fc.addMessage("", new FacesMessage(FacesMessage.SEVERITY_INFO,  msg, ""));
-		return "animais";
+		return "veiculos";
 	}
 	
 	

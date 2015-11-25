@@ -5,22 +5,46 @@
 		xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Insert title here</title>
+	<title>Sistema de controle de entregas</title>
+<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
 </h:head>
 <h:body>
-	<h1>Faça o login para acessar o sistema</h1>
-	<h2><h:messages/></h2>
-	<h:form>
-		<h:panelGrid columns="2">
-			<h:outputLabel value="User ID  : "/>
-			<h:inputText value="#{usuarioMB.usuario.userid}"/>
+		<div id="geral">
+			<div id="topo">
+				<div id="topo_imagem"></div>
+				<div id="topo_texto">
+					<h2>Sistema de Controle de Entregas</h2>
+				</div>
+			</div>
+
+		<div id="barraMenu">
+			<ul>			
+				<li><a href="index.xhtml">Principal</a></li>
+				<li><a href="cliente.xhtml">Cliente</a></li>
+				<li><a href="entrega.xhtml">Entrega</a></li>
+				<li><a href="motorista.xhtml">Motorista</a></li>
+				<li><a href="recebimento.xhtml">Recebimento</a></li>
+				<li><a href="veiculo.xhtml">Veículo</a></li>
+				<li><a href="usuario.xhtml">Usuário</a></li>
+			</ul>
+		</div>
+		
+		<div id="conteudo">
+			<h:form>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Usuário : "/>
+					<h:inputText value="#{UsuarioMB.usuario.userid}"/>
 			
-			<h:outputLabel value="Password : "/>
-			<h:inputText value="#{usuarioMB.usuario.senha}"/>
+					<h:outputLabel value="Senha : "/>
+					<h:inputText value="#{UsuarioMB.usuario.senha}"/>
 			
-			<h:commandButton value="Login" action="#{usuarioMB.login}"/>
-		</h:panelGrid>
+					<h:commandButton value="Login" action="#{UsuarioMB.login}"/>
+				</h:panelGrid>
 	
-	</h:form>
+			</h:form>
+			<div style="clear: both"></div>
+			<div id="rodape">Trabalho de Laboratório de Engenharia de Software III</div>		
+		</div>
+	</div>
 </h:body>
 </html>

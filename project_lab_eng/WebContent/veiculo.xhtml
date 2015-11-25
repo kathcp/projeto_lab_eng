@@ -13,17 +13,19 @@
 		<div id="topo">
 			<div id="topo_imagem"></div>
 			<div id="topo_texto">
-				<h2>Gerenciador de Frota</h2>
+				<h2>Sistema de Controle de Entregas</h2>
 			</div>
 		</div>
 
 		<div id="barraMenu">
 			<ul>
 				<li><a href="index.xhtml">Principal</a></li>
+				<li><a href="cliente.xhtml">Cliente</a></li>
+				<li><a href="entrega.xhtml">Entrega</a></li>
+				<li><a href="motorista.xhtml">Motorista</a></li>
+				<li><a href="recebimento.xhtml">Recebimento</a></li>
 				<li><a href="veiculo.xhtml">Veículo</a></li>
-				<li><a href="fornecedor.xhtml">Fornecedor</a></li>
-				<li><a href="pecas.xhtml">Peça</a></li>
-				<li><a href="ordemDeServico.xhtml">Ordem de Serviço</a></li>
+				<li><a href="usuario.xhtml">Usuário</a></li>			
 			</ul>
 		</div>
 		<div id="conteudo">
@@ -55,6 +57,15 @@
 					<h:outputLabel value="Ano Mod.:" />
 					<h:inputText id="anoMod" value="#{veiculoMB.veicAtual.anoModelo}" />
 					<!-- sem nada -->
+					
+					<h:outputLabel value="Capac. carga:" />
+					<h:inputText id="capacCarga" value="#{veiculoMB.veicAtual.capacidadeCarga}" />
+					<!-- sem nada -->
+					
+					<h:outputLabel value="Carroceria:" />
+					<h:inputText id="carroceria" value="#{veiculoMB.veicAtual.carroceria}" />
+					<!-- sem nada -->
+					
 
 					<h:outputLabel value="Status:" />
 					<h:inputText value="#{veiculoMB.veicAtual.status}" disabled="true" />

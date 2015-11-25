@@ -57,7 +57,7 @@ public class ClienteMB implements Serializable{
 	public Cliente getCliente() {
 		return cliente;
 	}
-	public void setAnimalAtual(Cliente cliente) {
+	public void setClienteAtual(Cliente cliente) {
 		this.cliente = cliente;
 	}
 	

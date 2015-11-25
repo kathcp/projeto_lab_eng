@@ -12,6 +12,7 @@ public class Motorista {
 	private String fone;
 	private String status;
 	private Date dtCadastro;
+	
 	public String getCnh() {
 		return cnh;
 	}
